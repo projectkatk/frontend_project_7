@@ -262,21 +262,18 @@ main-container layout & styling
   margin-top: -30px;
   padding-bottom: 20px;
 }
-.traffic-header {
-  display: flex;
-  justify-content: space-between;
-}
 
 .traffic-nav {
   display: flex;
   list-style: none;
   cursor: pointer;
+  justify-content: center;
 }
 
 .traffic-nav-link {
   margin: 7px;
   font-size: 0.7em;
-  padding: 5px 10px;
+  padding: 5px;
   border-style: none;
   background: transparent;
   border-radius: 20px;
@@ -333,6 +330,7 @@ section.daily, section.mobile {
   width: 50px;
   height: 50px;
   background-color: #7376bf;
+  margin-left: -20px;
 }
 
 .social-text {
@@ -341,18 +339,19 @@ section.daily, section.mobile {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-left: 10px;
 }
 
 .social-text p:first-child {
   font-weight: bold;
   font-size: 0.8em;
-  margin: 0;
+  margin: 0 5px;
 }
 
 .social-text p:last-child {
   font-weight: 300;
-  font-size: 2em;
-  margin: 0;
+  font-size: 1.5em;
+  margin: 0 0 0 5px;
   color: #525151;
   width: 50%;
   text-align: center;
@@ -563,9 +562,22 @@ Media Query @ 768px
     width: 100%;
     padding-bottom: 20px;
   } 
+
+  .traffic-header {
+    display: flex;
+    justify-content: space-between;
+  }
   
+
   .traffic-nav-link {
-    font-size: 1em;
+    margin: 7px;
+    font-size: 1em; 
+    padding: 5px 10px;
+    border-style: none;
+    background: transparent;
+    border-radius: 20px;
+    font-weight: bold;
+    text-align: center;
   }
 
   .wrapSmallCharts {
@@ -596,13 +608,19 @@ Media Query @ 768px
 
   .social-container {
     width: calc((100% - 40px) / 3.7);
-    padding: 20px 20px;
+    padding: 15px 15px;
   } 
+
+  .social-image {
+    margin-left: 10px;
+  }
 
   .social-text {
     flex-direction: column;
-    align-items: start;        
+    align-items: start;  
   }
+
+  
   
   .member-line {
     display: none;
@@ -641,6 +659,18 @@ Media Query @ 1024px
     padding: 20px 20px;
   } 
 
+  .social-image {
+    margin-left: 20px;
+  }
+
+  .social-text {
+    margin-left: 25px;
+  }
+
+  .social-text p:last-child {   
+    margin: 0 0 0 -5px;    
+  }
+
   .messageSettingWrap {
     display: flex;
     justify-content: space-between;
@@ -667,7 +697,7 @@ Media Query @ 1024px
   }
 
   .setting button {
-    margin: 18px 0;
+    margin: 19px 0;
   }
   
 }
